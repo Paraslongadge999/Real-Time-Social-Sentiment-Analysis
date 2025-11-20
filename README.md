@@ -1,127 +1,154 @@
-# 🌍 Real-Time Social Sentiment Dashboard  
-### Turning raw social comments into actionable insights — instantly.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Paraslongadge999/real-time-social-sentiment/main/banner.png" width="100%" />
+</p>
+
+<h1 align="center">📡 Real-Time Social Sentiment Dashboard</h1>
+<h3 align="center">Turning unstructured social comments into real-time, actionable insights.</h3>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue" />
+  <img src="https://img.shields.io/badge/Streamlit-Deployed-green" />
+  <img src="https://img.shields.io/badge/NLP-VADER-yellow" />
+  <img src="https://img.shields.io/badge/Status-Active-success" />
+</p>
 
 ---
 
-## ⭐ Project Overview  
-In today’s world, brands, creators, and businesses live in the middle of constant public feedback. Comments flow in every second across platforms like Twitter, Facebook, YouTube, and Instagram — but very few tools help you *understand* what people are saying in real time.
+## ⭐ Overview
 
-This project was born from a simple question:
+This project brings **real-time sentiment analysis** to life using a clean, intuitive **Streamlit dashboard**.  
+It simulates how social platforms like Instagram, Twitter, and Facebook deliver comments in real time — and visualizes how sentiment shifts second-by-second.
 
-> **“What if we could see public sentiment shift the moment a comment is posted?”**
-
-The result is a beautiful, real-time sentiment analysis dashboard built with **Streamlit**, **Python**, **NLP**, and **interactive data visualization**.  
-It analyzes social comments, classifies sentiment, visualizes trends, and even simulates live comment streams for demo purposes.
-
-A perfect blend of **data engineering**, **machine learning**, and **UI design** — packaged as a recruiter-friendly portfolio project.
+It was designed with **storytelling, UI elegance, and data-driven insight** in mind, making it perfect for recruiters, hiring managers, and real-world product demonstrations.
 
 ---
 
-## 🎯 What This Dashboard Does  
-This dashboard transforms a raw CSV dataset of social comments into a full analytic experience:
+## 🎯 What This Project Does
 
-### ✔ Real-time sentiment scoring (VADER NLP)  
-### ✔ KPI cards (Positive %, Neutral %, Negative %, total comments)  
-### ✔ Smart filtering (platforms, sentiment type, time)  
-### ✔ Advanced sentiment trend charts (Plotly)  
-### ✔ Platform-wise insights (where negativity spikes, where positivity grows)  
-### ✔ Clean preprocessing pipeline (normalization, cleaning, tokenization)  
-### ✔ Interactive drilldown table  
-### ✔ Professional simulated live comment streaming mode  
+### ✔ Real-time NLP sentiment scoring using VADER  
+### ✔ Beautiful KPI cards for instant insight  
+### ✔ Platform-level sentiment comparisons  
+### ✔ Interactive filtering + CSV export  
+### ✔ Rolling sentiment trend charts  
+### ✔ Comment drilldown table  
+### ✔ Advanced live-stream simulator  
+### ✔ Clean, professional UI with custom CSS  
 
-This is not just a visualization —  
-**It’s a functional product that mimics how a real SaaS sentiment tool works.**
+The dashboard feels like a **mini SaaS analytics platform**.
 
 ---
 
-## 🔥 Why I Built This  
-Recruiters often ask:  
-**“Can you build something end-to-end?”**
+## 🧠 Why I Built This
 
-I wanted a project that shows exactly that.
+I wanted a project that shows I can:
 
-From **data cleaning** → **NLP** → **back-end logic** → **front-end dashboard** → **deployment**,  
-this project demonstrates full-stack data skills with real-time components.
+- Build a complete data product  
+- Think like a product designer  
+- Use NLP to turn noisy comments into insight  
+- Make real-time systems with Python  
+- Develop clean interfaces with Streamlit  
+- Deploy to the cloud and make it public  
 
-It also tells a story:
-
-- How sentiment fluctuates over time  
-- How different platforms behave  
-- What triggers positive or negative reactions  
-- How an analyst or marketer could use this in real life  
-
-This is the kind of dashboard that product teams actually use — and now it lives in my portfolio.
+This project demonstrates all of that in one place.
 
 ---
 
-## 🧠 Tech Stack  
-| Layer | Tools Used |
-|------|------------|
-| **Frontend UI** | Streamlit (dark-mode themed, responsive layout), custom CSS |
-| **Data Processing** | Pandas, NumPy |
-| **NLP Engine** | VADER SentimentIntensityAnalyzer |
-| **Visualizations** | Plotly Express (line charts, bar charts, heatmaps) |
-| **Simulation Engine** | Async, time-delay based generator |
-| **Deployment** | Streamlit Cloud |
+## 🏗 Architecture Diagram  
+A simple visual representation of how everything works:
+
+      ┌──────────────────────────┐
+      │  sentiment_analysis.csv   │
+      └─────────────┬────────────┘
+                    ▼
+           ┌─────────────────┐
+           │ Preprocessing   │
+           │ (cleaning, NLP) │
+           └─────────────────┘
+                    ▼
+           ┌──────────────────┐
+           │ VADER Sentiment  │
+           │ Scoring Engine   │
+           └──────────────────┘
+                    ▼
+      ┌────────────────────────────────┐
+      │ Streamlit Dashboard            │
+      │ - KPIs                         │
+      │ - Filters                      │
+      │ - Trend Charts                 │
+      │ - Platform Insights            │
+      │ - Drilldown Table              │
+      │ - Real-Time Simulator          │
+      └────────────────────────────────┘
 
 ---
 
-## 📊 Key Dashboard Features
+## 🧩 Features Breakdown
 
-### 🟦 1. Filters & Smart Querying  
-- Filter by **platform**  
-- Filter by **sentiment type**  
-- Export filtered CSV  
-- Real-time statistics update automatically  
-
----
-
-### 🟩 2. KPI Scorecards (Business-Ready)  
+### 🔹 1. **KPI Dashboard**
+Summaries for:
 - Total comments  
-- Percentage positive  
-- Percentage neutral  
-- Percentage negative  
-- Count of platforms  
+- Positive / Negative / Neutral %  
+- Platform counts  
 
-These KPIs are designed to be **stakeholder-friendly**.
+### 🔹 2. **Sentiment Trend Analysis**
+Plotly line charts with:
+- Rolling average  
+- Color-coded trends  
+- Time-aware layout  
 
----
+### 🔹 3. **Platform Sentiment Visualization**
+- Grouped bar charts  
+- Pie chart for volume  
+- Heatmap for time-of-day trends  
 
-### 🟧 3. Sentiment Trend Visualization  
-A rolling trendline showing how sentiment evolves over time.  
-Built using Plotly for smooth transitions and better readability.
+### 🔹 4. **Drilldown Table**
+See raw comments with metadata:
+- Platform  
+- Cleaned text  
+- Sentiment class  
+- Timestamp  
 
-You can answer questions like:
+### 🔹 5. **Advanced Simulated Stream**
+A smooth, non-blocking, real-time flow:
+- LIVE indicator  
+- Auto-scrolling  
+- Dynamic line chart  
+- Toggle start/stop  
 
-- *“How does sentiment shift during peak hours?”*  
-- *“Are users becoming more positive after a product announcement?”*  
-- *“Do certain platforms generate more negativity?”*
-
----
-
-### 🟥 4. Drilldown Table  
-See every comment, its cleaned text, platform, timestamp, and predicted sentiment.
-
-Perfect for understanding **why** a spike occurred.
-
----
-
-### 🟪 5. Simulated Real-Time Streaming Mode  
-This is where the dashboard comes alive.
-
-Flip one toggle and the dashboard begins to "stream" comments as if they are arriving live.  
-It showcases:
-
-- Real-time scoring  
-- Real-time UI updates  
-- A custom mini-trendline for the stream  
-
-This mode alone makes the project feel like a real SaaS analytics tool.
+Looks and feels like real incoming comments.
 
 ---
 
-## 🛠 Installation & Running Locally
+## 🧠 NLP Model Explanation  
+This project uses **VADER (Valence Aware Dictionary and sEntiment Reasoner)**:
+
+- Optimized for social media text  
+- Understands emojis, slang, punctuation  
+- Outputs a **compound score** between -1 and +1  
+- Fast enough for real-time updates  
+- Zero training required  
+
+Sentiment classes are derived like:
+compound >=  0.05  → Positive
+compound <= -0.05  → Negative
+otherwise          → Neutral
+
+
+
+---
+
+## 📦 Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/Paraslongadge999
+git clone https://github.com/YOUR_USERNAME/real-time-social-sentiment.git
+
+cd real-time-social-sentiment
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+streamlit run app/app.py
+
+
